@@ -2,15 +2,15 @@
 %html
   %head
     %title InstaFoto
-      = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-      = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-      = csrf_meta_tags
-      = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = csrf_meta_tags
+    = csp_meta_tag
 
   %body
     %nav.navbar.navbar-inverse
       .container
-        .navbar_brand link_to "InstaFoto", root_path
+        %div.navbar_brand= link_to "InstaFoto", root_path
 
         - if user_signed_in?
           %ul.nav.navbar-nav.navbar-left
