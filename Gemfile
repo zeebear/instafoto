@@ -41,7 +41,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # My stuff
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'simple_form', '~> 4.1'
-gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'cloudinary', '~> 1.11', '>= 1.11.1'
