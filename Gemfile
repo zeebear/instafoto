@@ -47,6 +47,7 @@ gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'cloudinary', '~> 1.11', '>= 1.11.1'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 gem 'masonry-rails', '~> 0.2.4'
+gem 'acts_as_votable', '~> 0.12.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
