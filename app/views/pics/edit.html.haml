@@ -4,5 +4,8 @@
       .panel-heading
         %h1 Fix Foto!
       .panel-body
+        .current_image
+          %strong.center Right Now
+          = image_tag @pic.photo.url(:thumbnail)
         = render 'form'
 
