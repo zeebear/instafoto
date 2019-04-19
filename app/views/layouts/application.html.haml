@@ -14,13 +14,13 @@
           = link_to "InstaFoto", root_path, class: "navbar-brand"
 
           - if user_signed_in?
-            %ul.nav.navbar-nav.navbar-right
+            %ul.nav.navbar-nav.navbar-left
               %li= link_to "New Foto", new_pic_path
               %li= link_to "Settings", edit_user_registration_path
               %li= link_to "Sign Out", destroy_user_session_path, method: :delete
 
           - else
-            %ul.nav.navbar-nav.navbar-right
+            %ul.nav.navbar-nav.navbar-left
               %li= link_to "Join", new_user_registration_path
               %li= link_to "Sign in", new_user_session_path
 
