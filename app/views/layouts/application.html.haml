@@ -2,7 +2,7 @@
 %html
   %head
     %title InstaFoto
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = csrf_meta_tags
     = csp_meta_tag
@@ -10,18 +10,19 @@
   %body
     %nav.navbar.navbar-inverse
       .container
-        %div.navbar_brand= link_to "InstaFoto", root_path
+        .navbar-header
+          = link_to "InstaFoto", root_path, class: "navbar-brand"
 
-        - if user_signed_in?
-          %ul.nav.navbar-nav.navbar-left
-          %li= link_to "New Foto", new_pic_path
-          %li= link_to "Settings", edit_user_registration_path
-          %li= link_to "Sign Out", destroy_user_session_path, method: :delete
+          - if user_signed_in?
+            %ul.nav.navbar-nav.navbar-right
+              %li= link_to "New Foto", new_pic_path
+              %li= link_to "Settings", edit_user_registration_path
+              %li= link_to "Sign Out", destroy_user_session_path, method: :delete
 
-        - else
-          %ul.nav.navbar-nav.navbar-left
-          %li= link_to "Join", new_user_registration_path
-          %li= link_to "Sign in", new_user_session_path
+          - else
+            %ul.nav.navbar-nav.navbar-right
+              %li= link_to "Join", new_user_registration_path
+              %li= link_to "Sign in", new_user_session_path
 
     .container
       -flash.each do |name, msg|
